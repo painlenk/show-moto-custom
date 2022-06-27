@@ -1,6 +1,6 @@
 import { ThemeProvider } from "styled-components";
-import { GlobalStyle } from "../styles/globals";
-import theme from "../styles/theme";
+import { GlobalStyle } from "../../styles/globals";
+import theme from "../../styles/theme";
 
 import type { AppProps } from "next/app";
 
