@@ -7,13 +7,14 @@ const theme = {
       white: {
         light: "#D7D7D7",
       },
+      primary: "#FF9900"
 
     },
   },
 
   fontSize: {
     title: "3em",
-    text: "1.5em",
+    text: "1em",
   },
 
   fontWeight: {

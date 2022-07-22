@@ -1,6 +1,6 @@
 import Link from "next/link"
-import { Container } from "../styles"
-import { List } from "./styles"
+import { Container, List } from "./styles"
+
 
 export const Nav = () => {
     return (
