@@ -1,8 +1,26 @@
+import { emit } from "process";
+
 const theme = {
   colors: {
-    background: `#1819`,
-    text: `#e3e3e3`,
-    primary: `#ed2a4c`,
+    background: `#202020`,
+    text: {
+      white: {
+        light: "#D7D7D7",
+      },
+
+    },
+  },
+
+  fontSize: {
+    title: "3em",
+    text: "1.5em",
+  },
+
+  fontWeight: {
+    heavy: "700",
+    bold: "600",
+    medium: "400",
+    light: "100",
   },
 };
 
