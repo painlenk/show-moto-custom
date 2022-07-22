@@ -6,17 +6,17 @@ export const Header = () => {
       <LogoImage />
       <div>
         <ul>
-          <li>Home</li>
           <li>News</li>
-          <li>Contacts</li>
           <li>Calendar</li>
+          <li>Contacts</li>
+          <li>WorkShop</li>
         </ul>
       </div>
 
       <div>
         <ul>
           <li>Login</li>
-          <li>register</li>
+          <li>Register</li>
         </ul>
       </div>
     </header>
