@@ -2,7 +2,7 @@ import styled from "styled-components";
 import theme from "../../../styles/theme";
 
 export const HeaderContainer = styled.header`
-  width: 100vw;
+  
   height: 100px;
   display: flex;
   justify-content: center;

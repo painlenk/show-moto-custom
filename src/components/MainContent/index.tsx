@@ -1,10 +1,18 @@
-import { BackgroundImage } from "../../assets/images/BackgroundImage"
-import { Container } from "./styles"
+import { Container, GradientContainer, Main, Title } from "./styles"
 
 export const MainContent = () => {
     return (
-        <Container>
 
+        <Container  >
+            <GradientContainer>
+                <Main>
+                    <Title>
+                        <span>Harley Davidson</span>
+                        <p>announces new version of delux 2023</p>
+                    </Title>
+                </Main>
+            </GradientContainer>
         </Container>
+
     )
 }
