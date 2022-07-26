@@ -1,4 +1,5 @@
-import { Container, GradientContainer, Main, Title } from "./styles"
+import { Card } from "../Card"
+import { Box, Container, GradientContainer, Main, Title } from "./styles"
 
 export const MainContent = () => {
     return (
@@ -11,6 +12,11 @@ export const MainContent = () => {
                         <p>announces new version of delux 2023</p>
                     </Title>
                 </Main>
+                <Box>
+                    <Card />
+                    <Card />
+                    <Card />
+                </Box>
             </GradientContainer>
         </Container>
 
