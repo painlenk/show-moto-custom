@@ -7,11 +7,8 @@ import { MainContent } from "../components/MainContent";
 const Home: NextPage = () => {
   return (
     <Container>
-      <Header />
 
       <MainContent />
-
-
     </Container>
   );
 };

@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     width: 250px;
-    
     background-color: rgba(${props => props.theme.colors.cards});
     border-radius: ${props => props.theme.radius.normal}
 `
