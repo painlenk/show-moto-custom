@@ -2,12 +2,13 @@ import styled from "styled-components";
 import background from "../../assets/images/BackgroundImage/background.png";
 
 export const Container = styled.div`
-  background-image: url(${background.src});
+ /*  background-image: url(${background.src});
   background-repeat: no-repeat;
   background-position: right-top;
   background-size: cover;
   background-clip: content-box;
-  overflow: hidden;
+  overflow: hidden; */
+  height: 100%;
 `;
 export const GradientContainer = styled.div`
   background: linear-gradient(
@@ -16,6 +17,7 @@ export const GradientContainer = styled.div`
     rgba(44, 44, 44, 0) 97.43%
   );
   width: 100%;
+  height: 100%;
 `;
 
 export const Main = styled.main`
@@ -47,6 +49,6 @@ export const Box = styled.section`
   margin: 0 auto;
   display: flex;
   gap: 40px;
-  padding-top: 170px;
-  padding-bottom: 120px;
+  padding-top:70px;
+  padding-bottom: 50px;
 `;
