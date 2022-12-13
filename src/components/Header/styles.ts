@@ -2,8 +2,7 @@ import styled from "styled-components";
 import theme from "../../../styles/theme";
 
 export const HeaderContainer = styled.header`
-  
-  height: 100px;
+  height: 6.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,9 +16,7 @@ export const Container = styled.div`
 `;
 
 export const Box = styled.div`
-display: flex;
-justify-content: center;
-align-items: center
-`
-
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;

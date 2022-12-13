@@ -7,7 +7,7 @@ export const Container = styled.ul`
   list-style: none;
 
   li:first-child {
-    margin-right: 50px;
+    margin-right: 3.125rem;
   }
 
   a {

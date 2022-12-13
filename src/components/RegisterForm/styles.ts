@@ -8,13 +8,13 @@ export const Container = styled.div`
   align-items: center;
 
   width: 50%;
-  margin: 80px auto;
+  margin: 5rem auto;
   margin-bottom: 0px;
   border-radius: ${(props) => props.theme.radius.great};
 `;
 
 export const Title = styled.h1`
-  margin: 25px auto;
+  margin: 1.5rem auto;
   padding: 0;
   font-size: ${(props) => props.theme.fontSize.title};
   font-weight: ${(props) => props.theme.fontWeight.heavy};
@@ -26,7 +26,7 @@ export const FormContainer = styled.form`
 
   & div:nth-child(3) {
     flex-direction: column;
-    margin-top: 35px;
+    margin-top: 2.25rem;
 
     & input[type="file"] {
       display: none;
@@ -39,7 +39,7 @@ export const FormContainer = styled.form`
       align-items: right;
       flex-direction: column;
       color: ${(props) => props.theme.colors.text.white.light};
-      gap: 4px;
+      gap: 0.25rem;
 
       & > label {
         display: flex;
@@ -49,7 +49,7 @@ export const FormContainer = styled.form`
         background-color: ${(props) => props.theme.colors.backgroundGray};
         border-radius: ${(props) => props.theme.radius.small};
         width: 100%;
-        height: 38px;
+        height: 2.5rem;
         font-weight: bold;
         transition: all ease-in-out 0.4s;
 
@@ -64,9 +64,9 @@ export const FormContainer = styled.form`
     }
 
     & input[type="submit"] {
-      margin-top: 60px;
+      margin-top: 3.75rem;
       width: 40%;
-      height: 45px;
+      height: 2.75rem;
       font-weight: ${(props) => props.theme.fontWeight.heavy};
       font-size: ${(props) => props.theme.fontSize.text};
       border-radius: ${(props) => props.theme.radius.small};
@@ -92,7 +92,7 @@ export const Section = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 25px;
+  margin-bottom: 1.5rem;
 `;
 
 export const Box = styled.div`
@@ -102,20 +102,20 @@ export const Box = styled.div`
   width: 45%;
 
   & label {
-    margin-bottom: 0.25em;
+    margin-bottom: 0.25rem;
     font-size: ${(props) => props.theme.fontSize.text};
     font-weight: ${(props) => props.theme.fontWeight.heavy};
     color: ${(props) => props.theme.colors.text.primary};
   }
 
   & input {
-    height: 35px;
+    height: 2.25rem;
     border-radius: ${(props) => props.theme.radius.small};
     border: 1px solid ${(props) => props.theme.colors.text.gray.bold};
     font-size: ${(props) => props.theme.fontSize.text};
 
     width: 100%;
-    padding: 5px;
+    padding: 0.25rem;
     background-color: #d1d1d1;
 
     font-weight: ${(props) => props.theme.fontWeight.semiBold};

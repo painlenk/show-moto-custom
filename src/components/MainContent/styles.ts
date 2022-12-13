@@ -48,7 +48,7 @@ export const Title = styled.div`
 export const Box = styled.section`
   width: 80%;
   margin: 0 auto;
-  margin-top: 200px;
+  margin-top: 12.5rem;
   display: flex;
-  gap: 40px;
+  gap: 2.5rem;
 `;
