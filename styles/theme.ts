@@ -3,6 +3,7 @@ import { emit } from "process";
 const theme = {
   colors: {
     background: `#202020`,
+    backgroundGray: "#c7c7c7",
     primary: "#FF9900",
     cards: "255, 255, 255, 0.8",
     form: "48,48,48, 0.9",
