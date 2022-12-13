@@ -2,7 +2,7 @@ import styled from "styled-components";
 import background from "../../assets/images/BackgroundImage/background.png";
 
 export const Container = styled.div`
- /*  background-image: url(${background.src});
+  /*  background-image: url(${background.src});
   background-repeat: no-repeat;
   background-position: right-top;
   background-size: cover;
@@ -47,8 +47,7 @@ export const Title = styled.div`
 export const Box = styled.section`
   width: 80%;
   margin: 0 auto;
+  margin-top: 270px;
   display: flex;
   gap: 40px;
-  padding-top:70px;
-  padding-bottom: 50px;
 `;
