@@ -26,7 +26,7 @@ export const Main = styled.main`
 `;
 
 export const Title = styled.div`
-  width: 22em;
+  width: 30%;
   display: inline-block;
   margin-top: 6.25em;
 
@@ -34,6 +34,7 @@ export const Title = styled.div`
   p {
     font-weight: ${(props) => props.theme.fontWeight.bold};
     font-size: ${(props) => props.theme.fontSize.title};
+    font-family: "Arvo";
   }
 
   & span {
@@ -47,7 +48,7 @@ export const Title = styled.div`
 export const Box = styled.section`
   width: 80%;
   margin: 0 auto;
-  margin-top: 270px;
+  margin-top: 200px;
   display: flex;
   gap: 40px;
 `;

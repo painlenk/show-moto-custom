@@ -11,22 +11,22 @@ export const RegisterForm = () => {
         <Section>
           <Box>
             <label htmlFor="username">Username</label>
-            <input type="text" id="username" />
+            <input type="text" id="username" required />
           </Box>
           <Box>
             <label htmlFor="email">email</label>
-            <input type="email" id="email" />
+            <input type="email" id="email" required />
           </Box>
         </Section>
 
         <Section>
           <Box>
             <label htmlFor="confirmPassword">Confirm Password</label>
-            <input type="password" />
+            <input type="password" id="confirmPassword" required />
           </Box>
           <Box>
             <label htmlFor="password">password</label>
-            <input type="password" id="password" />
+            <input type="password" id="password" required />
           </Box>
         </Section>
         <Section>

@@ -22,7 +22,7 @@ const theme = {
   },
 
   fontSize: {
-    title: "2.25em",
+    title: "3em",
     text: "1em",
     subText: "0.875em",
   },
