@@ -120,4 +120,8 @@ export const Box = styled.div`
 
     font-weight: ${(props) => props.theme.fontWeight.semiBold};
   }
+
+  & p {
+    color: #b00020;
+  }
 `;
