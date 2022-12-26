@@ -4,7 +4,7 @@ export const Enter = () => {
   return (
     <Container>
       <li>
-        <Link href="/">Login</Link>
+        <Link href="/login">Login</Link>
       </li>
       <li>
         <Link href="/register">Register</Link>
