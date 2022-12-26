@@ -4,10 +4,10 @@ export const Enter = () => {
   return (
     <Container>
       <li>
-        <Link href="/login">Login</Link>
+        <Link href="/account/login">Login</Link>
       </li>
       <li>
-        <Link href="/register">Register</Link>
+        <Link href="/account/register">Register</Link>
       </li>
     </Container>
   );
