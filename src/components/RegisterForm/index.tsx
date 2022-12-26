@@ -1,22 +1,17 @@
 import { Box, Container, FormContainer, Section, Title } from "./styles";
 import { schema } from "../../schemas/inputsSchema";
-import { FieldError, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 export const RegisterForm = () => {
   const {
     register,
-    handleSubmit,
     formState: { errors },
   } = useForm({
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = (data: any) => console.log(data);
-
-  const usernameMessageError = errors.username?.message?.toString();
   const messageError = (errors: any) => {
-    console.log(errors?.type);
     if (!errors) {
       return "";
     }
@@ -34,7 +29,7 @@ export const RegisterForm = () => {
         <Title>Register</Title>
       </div>
 
-      <FormContainer action="#" onSubmit={handleSubmit(onSubmit)}>
+      <FormContainer action="#">
         <Section>
           <Box>
             <label htmlFor="username">Username</label>
@@ -59,9 +54,9 @@ export const RegisterForm = () => {
             <input
               type="password"
               id="confirmPassword"
-              {...register("password")}
+              {...register("confirmPassword")}
             />
-            <p>{messageError(errors.password)}</p>
+            <p>{messageError(errors.confirmPassword)}</p>
           </Box>
         </Section>
         <Section>

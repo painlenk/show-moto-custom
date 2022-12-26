@@ -5,5 +5,10 @@ export const schema = z
     username: z.string().min(4, "require minimun 4 caracters"),
     email: z.string().email("insert valid email"),
     password: z.string().min(4, "require minimun 4 caracters"),
+    confirmPassword: z.string().min(4, "require minimun 4 caracters"),
   })
-  .required();
+  .required()
+  .refine((data) => data.password === data.confirmPassword, {
+    message: "Passwords dont match",
+    path: ["confirmPassword"],
+  });
