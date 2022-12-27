@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
 import { useRouter } from "next/router";
+import { IUserData } from "../../interfaces/IUserData";
 
 export const RegisterForm = () => {
   const {
@@ -30,10 +31,16 @@ export const RegisterForm = () => {
 
   const onSubmit = async (data: any) => {
     try {
-      await axios.post("/api/users/account/register", data);
-      router.replace("/");
-    } catch (err: any) {
-      console.log(err.response.data);
+      const userData: IUserData = {
+        username: data.username,
+        email: data.email,
+        password: data.password,
+        avatar: data.avatar,
+      };
+
+      await axios.post("/api/users/account/register", userData);
+    } catch {
+      console.error("nao foi possivel comunicar com a api");
     }
   };
 
