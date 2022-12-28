@@ -2,11 +2,14 @@ import { Box, Container, FormContainer, Section, Title } from "./styles";
 import { schema } from "../../schemas/inputsSchema";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import axios from "axios";
+import axios, { AxiosError, AxiosResponse } from "axios";
 import { useRouter } from "next/router";
 import { IUserData } from "../../interfaces/IUserData";
+import { ChangeEvent, useState } from "react";
 
 export const RegisterForm = () => {
+  const [error, setError] = useState("");
+
   const {
     register,
     formState: { errors },
@@ -31,16 +34,16 @@ export const RegisterForm = () => {
 
   const onSubmit = async (data: any) => {
     try {
-      const userData: IUserData = {
-        username: data.username,
-        email: data.email,
-        password: data.password,
-        avatar: data.avatar,
-      };
+      data.avatar = data.avatar[0];
 
-      await axios.post("/api/users/account/register", userData);
-    } catch {
-      console.error("nao foi possivel comunicar com a api");
+      const formData = new FormData();
+      formData.append("data", data);
+      console.log("data", formData);
+      await axios.post("/api/users/account/register", formData);
+    } catch (e: any) {
+      console.error("nao foi possivel comunicar com a api", e);
+
+      setError(e.response?.data);
     }
   };
 
@@ -49,7 +52,17 @@ export const RegisterForm = () => {
       <div>
         <Title>Register</Title>
       </div>
-
+      {error && (
+        <div
+          style={{
+            height: "40px",
+            border: "1px solid blue",
+            color: "pink",
+          }}
+        >
+          {error}
+        </div>
+      )}
       <FormContainer onSubmit={handleSubmit(onSubmit)}>
         <Section>
           <Box>
@@ -103,7 +116,7 @@ export const RegisterForm = () => {
               (Upload image)
             </div>
             <label htmlFor="file">
-              <input type="file" id="file" name="avatar" />
+              <input type="file" id="file" {...register("avatar")} />
               <span>Chose a file</span>
             </label>
           </div>

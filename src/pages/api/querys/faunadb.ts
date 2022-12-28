@@ -1,12 +1,14 @@
 import { fauna } from "../../../services/fauna";
-import { query as q } from "faunadb";
+import { query } from "faunadb";
 import { v4 as uuidV4 } from "uuid";
 import { IUserData } from "../../../interfaces/IUserData";
 
 export const getUserByUsername = async (username: string) => {
   try {
     const user = await fauna.query(
-      q.Get(q.Match(q.Index("users_by_username"), q.Casefold(username)))
+      query.Get(
+        query.Match(query.Index("users_by_username"), query.Casefold(username))
+      )
     );
     return user;
   } catch (e) {
@@ -17,7 +19,9 @@ export const getUserByUsername = async (username: string) => {
 export const getUserByEmail = async (email: string) => {
   try {
     const user = await fauna.query(
-      q.Get(q.Match(q.Index("users_by_email"), q.Casefold(email)))
+      query.Get(
+        query.Match(query.Index("users_by_email"), query.Casefold(email))
+      )
     );
 
     return user;
@@ -28,7 +32,7 @@ export const getUserByEmail = async (email: string) => {
 
 export const getAllUser = async () => {
   try {
-    const user = await fauna.query(q.Get(q.Index("users_by_username")));
+    const user = await fauna.query(query.Get(query.Index("users_by_username")));
 
     return user;
   } catch (e) {
@@ -36,19 +40,17 @@ export const getAllUser = async () => {
   }
 };
 
-export const createUser = (dataUser: IUserData) => {
+export const createUser = async (dataUser: IUserData) => {
   try {
-    fauna.query(
-      q.Create(q.Collection("users"), {
+    await fauna.query(
+      query.Create(query.Collection("users"), {
         data: {
           id: uuidV4(),
-          username: dataUser.username,
-          email: dataUser.username,
-          password: dataUser.password,
-          avatar: dataUser.avatar,
+          ...dataUser,
         },
       })
     );
+
     return;
   } catch (e) {
     console.log("erro ao criar usuario");
